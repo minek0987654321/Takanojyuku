@@ -1,0 +1,645 @@
+/*リセットCSS*/
+
+html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif;
+}
+
+article, header, footer, aside, figure, figcaption, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+ol, ul {
+    list-style: none;
+    list-style-type: none;
+}
+
+/*リセットCSSここまで*/
+
+.header-outer {
+    width: 90%;
+    height: 100px;
+    background-color: #fff;
+}
+
+.header-left>h1 {
+    font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', sans-serif;
+    font-size: 1.5vw;
+    /*vw：ブラウザに対してのフォントのサイズ*/
+    line-height: 100px;
+    /*親要素（今回の場合はheader-outer）の幅を指定するとの真ん中になる*/
+    letter-spacing: 1px;
+    /*letter-spacing：文字間*/
+    padding-left: 40px;
+
+}
+
+.nav-list li {
+    display: inline-block;
+    /*←並列レイアウトのcss。position: flexも並列*/
+    margin-right: 1vw;
+    /*ブラウザの解像度pxに対しての割合1vw=1%もしくは1/100*/
+    position: relative;
+    font-size: 1.1vw;
+}
+
+/*↑display:inlineだけでも、並列になるが、<-block>を追加しないとサイズの変更ができない*/
+
+/*以下、hoverすると出てくる下線の設定*/
+
+.nav-list li:before {
+    /*:before：要素の直前(nav-kist li)にHTMLには書かれていない要素もどきを作れる*/
+    position: absolute;
+    /*親要素のrelativeはliなので、リスト全体が親要素*/
+    content: '';
+    /*空要素content: "";ダブルコーテーションマークの間に文字などを入れると、HTMLになくてもそ挿入される*/
+    width: 100%;
+    /*各リストに対しての横幅100%の長さ*/
+    height: 1px;
+    /*下線の太さ*/
+    background: #333;
+    bottom: -4px;
+    /*下線の位置*/
+    transform: scale(0, 1);
+    /*変形（transform）を伸縮（scale）で指定。（縦方向,横方向）1を基準として割合で示す。*/
+    transform-origin: center top;
+    /*下線の動きの中心点の設定*/
+    transition: .3s;
+    /*下線の動きの時間*/
+}
+
+.nav-list li:hover:before {
+    /*headerの右側の各リストのhover*/
+    transform: scale(1, 1);
+}
+
+.header-right {
+    /*headerの右側のリスト全体の位置*/
+    position: absolute;
+    right: 45px;
+    top: 45px;
+}
+
+/*
+.border {
+    border: 1px solid #666666;
+    headerとmain(page1)に境界線 
+}*/
+
+#page1 {
+    position: relative;
+    width: 100vw;
+    height: 617px;
+    overflow: hidden;
+}
+
+/*page1の画像*/
+
+.top-img{
+    width: 100vw;
+    height: 666px;
+    position: absolute;
+    color: transparent;  /*文字を消してる*/
+    background-size: cover;
+    opacity: 1;
+    animation: ImgAnime 30s infinite ease;
+}
+
+.top-img:nth-child(1){
+    background-image: url(https://takano-juku.com/wp-content/themes/takanojukutheme/img/classroom1-min.jpg);
+    animation-delay: 0s;
+}
+
+.top-img:nth-child(2){
+    background-image: url(https://takano-juku.com/wp-content/themes/takanojukutheme/img/jeans-min.jpg);
+    animation-delay: 10s;
+}
+
+.top-img:nth-child(3){
+    background-image: url(https://takano-juku.com/wp-content/themes/takanojukutheme/img/girl-min.jpg);
+    animation-delay: 20s;
+}
+
+@keyframes ImgAnime {
+    0%{
+        opacity: 0;
+        transform: scale(1.5);
+        filter: brightness(25);
+    }
+
+    16%{
+        opacity: 1;
+        filter: brightness(1);
+    }
+    34%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+        filter: brightness(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1);
+        filter: brightness(25);
+    }
+}
+
+
+/*page1の画像上の文字*/
+
+.top-inner h1 {
+    position: absolute;
+    top: 34%;
+    color: #fff;
+    font-size: 4.2vw;
+    /*rem：1rem=16px（設定なしのブラウザでは） ブラウザのフォントサイズに依存する*/
+    left: 5%;
+    letter-spacing: 1px;
+    /*文字時間*/
+    line-height: 4.9vw;
+    /*行間*/
+    z-index: 11;/*奥行き・手前*/
+}
+
+/*高野塾とは*/
+
+#page2 {
+    position: relative;
+    width: 100vw;
+    margin: 100px 0px;
+}
+
+/*page2の上側の文字と画像*/
+
+.content-wrap {
+    width: 100%;
+    height: 287px;
+    display: flex;
+}
+
+h2 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+#page2 p {
+    font-size: 14px;
+    letter-spacing: 3px;
+    line-height: 28px;
+}
+
+.student1 img {
+    width: 100%;
+}
+
+.txt-wrap {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 20px;
+}
+
+/*高野塾とは・塾長メッセージ*/
+
+.btn-box {
+    margin-top: 290px;
+    text-align: center;
+    /*文字の位置。ブラウザに対してセンター揃え*/
+}
+
+/*高野塾とはのボタン*/
+
+.btn1 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    /*文字間*/
+    color: #fff;
+    background-color: #4E0404;
+    padding: 1.25em 3.5em;
+}
+
+/*高野塾とはの三角
+boder同士が重なると重なる角部分は４５度に半分づつになる。
+これを利用して、三角に必要な方向以のものはtransparent＝透明にすることで三角を作る*/
+
+/*見本のサイトはwebフォントのアイコン使ってる*/
+
+.btn1::after {
+    content: "";
+    display: inline-block;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+    margin-left: 1.5em;
+}
+
+/*塾長メッセージのボタン*/
+
+.btn2 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #4E0404;
+    padding: 1.25em 3.5em;
+    margin-left: 100px;
+}
+
+.btn2::after {
+    content: "";
+    display: inline-block;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+    margin-left: 1.5em;
+}
+
+#page3 {
+    width: 100%;
+    position: relative;
+    padding: 100px 0px;
+    background-color: rgba(78, 62, 62, 0.1);
+}
+
+/*選ばれる理由の中央揃え*/
+.heading{
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+h3 {   /*hタグはデフォルトで、blockなので、text-alignは指定できない、中の文字は中央揃えにはなる*/
+    display: inline-block;/*文字にだけ下線を引き時はinline-blickを使う*/
+    font-size: 40px;
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+    text-align: center;  /*←この要素にはこの値は有効ではない。意味がない。この値は親要素に有効。*/
+}
+
+/*page3の上側の文字と絵*/
+.content-wrap1{
+    width: 100%;
+    display: flex;/*よこならび*/
+}
+
+/*page3の上側の文字全体*/
+.txt-wrap1{
+    line-height: 32px;
+    letter-spacing: 3px;
+    margin: auto;
+    width: 100%;
+}
+
+/*page3の上側の大きい文字群*/
+h4{
+    margin-bottom: 5px;
+}
+
+/*page3の上側の大きい文字*/
+.bg {
+    font-size: 40px;
+}
+
+.text-inner{/*page3の文字群*/
+    width: 80%;
+    margin: auto;
+}
+
+/*page3の上側の画像*/
+.student2{
+    width: 100%;
+}
+.student2 img {
+    width: 100%;
+}
+
+/*選ばれる理由二段目*/
+.content-wrap2{
+    width: 100%;
+    display: flex;/*よこならび*/
+}
+
+/*page3の上側の文字全体*/
+.txt-wrap2{
+    line-height: 32px;
+    letter-spacing: 3px;
+    margin: auto;
+    width: 100%;
+}
+
+/*page3の上側の画像*/
+.teacher1{
+    width: 100%;
+}
+.teacher1 img {
+    width: 100%;
+}
+
+/*選ばれる理由三段目*/
+.content-wrap3{
+    width: 100%;
+    display: flex;/*よこならび*/
+}
+
+/*page3の上側の画像*/
+.student4{
+    width: 100%;
+}
+.student4 img {
+    width: 100%;
+}
+
+/*実績の文字と画像*/
+.result-wrap{  
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+
+}
+
+.result-txtbox{   /*グレーの背景部分*/
+    background-color: rgba(78, 62, 62, 0.1);
+    margin-right: 30%;
+}
+
+/*実績のの左側文字*/
+.result-txt{
+    width: 75%;
+    padding-top: 100px;
+    margin: auto;
+}
+
+.student3 {
+    margin-top: -300px;
+    text-align: right;
+}
+
+.student3 img{
+    width: 60%;
+}
+
+.btn3 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #4E0404;
+    padding: 1.25em 3.5em;
+}
+
+.btn3::after {
+    content: "";
+    display: inline-block;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+    margin-left: 1.5em;
+}
+
+.btn-box2{
+    margin-top: 30px;
+    padding-bottom: 100px;
+}
+
+/*コース・料金*/
+.content-inner{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.pict-box{
+    display: flex;
+    widows: 100%;;
+    text-align: center;/*文字と写真を*/
+
+}
+
+.pict p{
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-top: 10px;
+}
+
+.pict img{
+    width: 90%;
+}
+
+.btn-box3{
+    margin-top: 100px;
+}
+
+.btn4 {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #fff;
+    background-color: #4E0404;
+    padding: 1.25em 3.5em;
+}
+
+.btn4::after {
+    content: "";
+    display: inline-block;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #fff;
+    margin-left: 1.5em;
+
+}
+
+.gmap{   /*地図の表示のサイズ指定*/
+    width: 350px;
+    height: 200px;
+    overflow: hidden;/*指定した範囲からはみ出た部分を隠す*/
+}
+
+h4{
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.map-txt{
+    padding-left: 10px;
+    padding-top: 16px;
+    width: 350px;
+    height: 82px;
+    background-color: rgba(78, 62, 62, 0.1);
+}
+
+.gmap p{
+    font-size: 16px;
+}
+
+.content-inner2{
+    display: flex; /*横並び*/
+    flex-wrap: wrap; /*flexのアイテムを折り返す*/
+    justify-content: space-around; /*アイテムの両端にスペースを均等に割り付け*/
+    width: 95%;
+    margin: auto;
+}
+
+.map{
+    margin-bottom: 100px;
+}
+
+.content-inner3{
+    text-align: center;
+}
+
+.video{
+    justify-content: space-around;
+    display: flex;
+}
+
+.blogs{
+    width: 250px;
+}
+
+.blogs img{
+    width: 300px;
+    height: 200px;
+}
+
+.blogs h1{
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 3px;
+    margin: 5px 0;
+}
+
+.blogs time{
+    letter-spacing: 3px;
+    font-size: 12px;
+    text-align: right;/*親要素に有効*/
+}
+
+.blog-inner{
+    display: flex;
+    justify-content: space-around;
+}
+
+.blog-btn{
+    text-align: center;
+}
+
+.sp-no{
+    width: 100%;
+    height: 200px;
+    background-color:#000;
+    position: relative;
+}
+
+.navi-box{
+    display: flex;
+}
+
+.navi-box1{
+    margin: 35px 0 0 40px;
+}
+
+.navi-box2{
+    margin: 35px 0 0 40px;
+}
+
+.navi1 li a{
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 3px;
+}
+
+.sns{
+    display: flex;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+}
+
+.yt{/*アイコンの丸い背景の設定*/
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.tw{/*アイコンの丸い背景の設定*/
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 20px;
+}
+
+.inst{/*アイコンの丸い背景の設定*/
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 20px;
+}
+
+.fb{/*アイコンの丸い背景の設定*/
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-left: 20px;
+}
+
+.icon{/*アイコンの中の画像の位置*/
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0px;
+}
+
+h5{
+    color: #fff;
+    position: absolute;
+    right: 40px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    bottom: 35px;
+}
+
+/*動きの指示 fadein fadeon*/
+.fadein {    /*スタート位置、文字の動き*/
+    opacity: 0;   /*スタート位置の不透明度*/
+    transform: translate3d(-70px,0,0);  /*スタートの位置*/
+    transition-property: opacity, transform;  /*スタート後（フェードインの時のプロパティー）*/
+    transition-duration: 1s; /*スタートの動きの尺*/
+    transition-delay: 0.4s;  /*sスタートするまでの間*/
+    transition-timing-function: ease;  /*動きの緩急*/
+  }
+
+.fadeon {      /*動きの終着点*/
+    opacity: 1;  /*終着点での不透明度100%*/
+    transform: translateZ(0);  /*終着点での位置*/  
+  }

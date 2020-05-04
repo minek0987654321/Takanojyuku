@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+       $(function(){
+  $(window).scroll(function (){
+    $(".fadein").each(function(){
+      var imgPos = $(this).offset().top;
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + windowHeight/5){
+        $(this).addClass("fadeon");
+      } else {
+        $(this).removeClass("fadeon");
+      }
+    });
+  });
+});
+   </script>
+  </head>
+  <body>
+    <header class="header-outer border">
+        <div class="header-left">
+         <h1>
+          <a href="https://takano-juku.com">TAKANO　JYUKU</a>
+         </h1>
+        </div>
+        <nav class="header-right">
+         <ul class="nav-list">
+            <li><a href="#">高野塾とは</a></li>    <!---->
+            <li><a href="#">塾長メッセージ</a></li>
+            <li><a href="#">合格実績</a></li>
+            <li><a href="#">コース・料金</a></li>
+            <li><a href="#">入塾の流れ</a></li>
+            <li><a href="#">よくある質問</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+         </ul>
+        </nav>
+    </header>
+    <section id="page1" class="border">
+      <div class="top-inner">
+        <div class="top-img">image-01</div>
+        <div class="top-img">image-02</div>
+        <div class="top-img">image-03</div>
+     
+        <h1>TAKANO<br>JUKU</br>STYLE</h1>
+      </div> 
+    </section>
+    <section id="page2">
+      <div class="content-wrap">
+        <div class="txt-wrap fadein">
+          <h2>高野塾とは</h2>
+          <p>
+           高野塾は香川県丸亀市、坂出市、宇多津町に計3校を展開している地域密着型の個別指導型塾です。「みんなで良くなる」をテーマに全員が日々勉学に励んでいます。目標に向かって勉強しながらみんなで楽しい青春のひとときも送れる。これが高野塾スタイルです。
+          </p>
+        </div>
+        <div class="student1">
+          <img src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/student1-min.jpg">
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="#" class="btn1">  <!--高野塾とは・三角-->
+          高野塾とは
+        </a>
+        <a href="#" class="btn2">
+          塾長メッセージ
+        </a>
+      </div>
+    </section>
+    <section id="page3">
+      <div class="heading">
+        <h3>選ばれる理由</h3>
+      </div>
+      <div class="content-wrap1">
+        <div class="txt-wrap1">
+          <div class="text-inner fadein">
+           <h4>
+             <span class="bg">個</span>性を重視！
+             <br>
+             完全個別型カリキュラム
+           </h4>
+           <p>生徒全員が最大限にメリットを享受できるように完全個別型カリキュラムを採用しています。生徒がこれから伸ばしたい科目に絞ってカリキュラムを組むことが可能です。高野塾では生徒の個性を大切にしています。</p>
+          </div>
+        </div> 
+        <div class="student2"> 
+          <img src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/student2-min.jpg">
+        </div>
+     </div>
+     <div class="content-wrap2">
+        <div class="teacher1"> 
+            <img src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/teacher1-min.jpg">
+        </div>
+        <div class="txt-wrap2">
+          <div class="text-inner fadein">
+           <h4>
+             <span class="bg">勉</span>強だけじゃない！
+             <br>
+             経験豊富な講師の人間教育
+           </h4>
+           <p>私たちの講師採用基準は出身大学や偏差値だけでなく人間性を重視しています。教え方や指導力はもちろんのこと責任感や精神面にも優れた講師を採用しています。勉強だけでなく人格を高める教育にも力を入れています。</p>
+          </div>
+        </div> 
+     </div>
+     <div class="content-wrap3">
+        <div class="txt-wrap1">
+          <div class="text-inner fadein">
+           <h4>
+             <span class="bg">結</span>果にコミット！
+             <br>
+             第一志望合格主義
+           </h4>
+           <p>受験勉強は結果が全てです。定期テストの点数や模試の判定が良くても最終的に志望校に合格しなければ意味がありません。私たちは結果にコミットするために早めに入試対策を実施し毎年数多くの生徒を第一志望校へと送り出しています。</p>
+          </div>
+        </div> 
+        <div class="student4"> 
+          <img src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/student3-min.jpg">
+        </div>
+     </div>
+    </section>
+    <section id="page2">
+      <div class="heading">
+        <h3>合格実績</h3>
+      </div>
+      <div class="result-wrap"><!--文字と画像-->
+        <div class="result-txtbox"><!--グレーの背景部分-->
+          <div class="result-txt"><!--文字のみ-->
+           <h2>2019年度
+             <br>
+             入試合格実績
+           </h2>
+           <p>今年も100名以上の生徒たちが
+             <br>
+             第一志望校へ巣立ちました。
+           </p>
+      
+           <div class="btn-box2">
+             <a href="#" class="btn3">
+              高校大学卒業実績
+             </a>
+           </div>
+        </div>
+       </div>
+       <div class="student3"><!--画像のみ-->
+         <img src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/student4-min.jpg">
+       </div>
+      </div>
+    </section>
+    <!--コース・料金-->
+    <section id="page3">
+      <div class="heading">
+        <h3>コース・料金</h3>
+      </div>
+      <div class="content-inner">
+        <div class="pict-box">
+          <div class="pict">
+            <img src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/student5-min.jpg">
+            <p>小学生コーズ</p>
+          </div>
+          <div class="pict">
+              <img src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/student6-min.jpg">
+              <p>中学生コース</p>
+          </div>
+          <div class="pict">
+             <img src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/student7-min.jpg">
+              <p>高校生コース</p>
+          </div>
+        </div>
+        <div class="btn-box3">
+          <a href="#" class="btn4">コース・料金</a>
+        </div>
+      </div>
+    </section>
+    <section id="page2"><!--校舎・教室-->
+      <div class="heading">
+        <h3>校舎・教室</h3>
+      </div>
+      <div class="content-inner2">
+        <div class="map">
+          <h4>宇多津校</h4>
+          <!--Googleマップを埋め込む<div class="ggmap">iframeのコピーしたコード</div>-->
+          <div class="gmap">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13182.907341847525!2d133.80767613412257!3d34.30650468859841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3553d8cf1a8e1557%3A0x3effc4f25f0c1380!2z44CSNzY5LTAyMDYg6aaZ5bed55yM57a-5q2M6YOh5a6H5aSa5rSl55S65rWc5YWt55Wq5LiB77yY77yX!5e0!3m2!1sja!2sjp!4v1575546275090!5m2!1sja!2sjp"
+                     width="100%"
+                     height="350px"
+                     frameborder="0"
+                     style="border:0; margin-top: -150px;">
+              </iframe>
+          </div>
+          <div class="map-txt">
+            <p>香川県綾歌郡宇多津町浜六番丁87-5</p>
+            <p>宇多津駅から徒歩2分</p>
+          </div>
+        </div>
+        <div class="map">
+            <h4>坂出校</h4>
+            <!--Googleマップを埋め込む<div class="ggmap">iframeのコピーしたコード</div>-->
+            <div class="gmap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3295.2593884776948!2d133.85561781521582!3d34.318412980534404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3553de9a08261211%3A0x7508500771181d2e!2z44CSNzYyLTAwMDEg6aaZ5bed55yM5Z2C5Ye65biC5Lqs55S677yT5LiB55uu77yW4oiS77yS77yX!5e0!3m2!1sja!2sjp!4v1575591266897!5m2!1sja!2sjp"
+                       width="100%"
+                       height="350px"
+                       frameborder="0"
+                       style="border:0; margin-top: -150px;">
+                </iframe>
+            </div>
+            <div class="map-txt">
+              <p>香川県坂出市京町3丁目6-27</p>
+              <p>坂出駅から徒歩5分</p>
+            </div>
+          </div>
+          <div class="map">
+              <h4>丸亀校</h4>
+              <!--Googleマップを埋め込む<div class="ggmap">iframeのコピーしたコード</div>-->
+              <div class="gmap">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3296.617175608544!2d133.794374115215!3d34.28381308054362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3553d87c39fbee7f%3A0x25b65ab0e2885d7d!2z44CSNzYzLTAwMzIg6aaZ5bed55yM5Li45LqA5biC5Z-O6KW_55S677yS5LiB55uu77yS4oiS77yU77yY!5e0!3m2!1sja!2sjp!4v1575591492136!5m2!1sja!2sjp"
+                         width="100%"
+                         height="350px"
+                         frameborder="0"
+                         style="border:0; margin-top: -150px;">
+                  </iframe>
+              </div>
+              <div class="map-txt">
+                <p>香川県丸亀市城西町2丁目2-48</p>
+                <p>丸亀高校から徒歩1分</p>
+              </div>
+            </div>
+      </div>
+    </section>
+    <section id="page3">
+      <div class="heading">
+        <h3>TAKANO JYUKU YV</h3>
+      </div>
+      <div class="content-inner3">
+        <div class="video">
+          <div class="ytb">
+              <iframe src="https://www.youtube.com/embed/R6bnCNFL5K8" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+          </div>
+          <div class="ytb">
+              <iframe src="https://www.youtube.com/embed/YFTgo1gFLvI" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+          </div>
+          <div class="ytb">
+              <iframe src="https://www.youtube.com/embed/QwziXkfyjLM" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+          </div>
+          <div class="ytb">
+              <iframe src="https://www.youtube.com/embed/eEQocr1EtdM" 
+                      frameborder="0" 
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+          </div>
+        </div>
+        <div class="btn-box3">
+          <a href="#" class="btn4">YouTubuを見る</a>
+        </div>
+      </div>
+    </section>
+    <section id="page2">
+      <div class="heading">
+        <h3>BLOG</h2>
+      </div>
+      <div class="content-inner4">
+       <div class="blog-inner">
+         <div class="blogs">
+           <a href="https://takano-juku.com/all/%e9%ab%98%e9%87%8e%e5%a1%betv/">
+           <img src="https://takano-juku.com/wp-content/uploads/2019/11/img_0507.jpg">
+           </a>
+           <h1>高野塾TV</h1>
+           <time><!--timrタグ、PCが日時と認識できるようにするため-->
+             <p>2019-11-24</p>
+           </time>
+         </div>
+         <div class="blogs">
+             <a href="https://takano-juku.com/all/%e9%ab%98%e9%87%8e%e5%a1%betv/">
+             <img src="https://takano-juku.com/wp-content/uploads/2019/11/img_0477-300x200.jpg">
+             </a>
+             <h1>第3回ベネッセ・駿台マーク</h1>
+             <time><!--timrタグ、PCが日時と認識できるようにするため-->
+               <p>2019-11-27</p>
+             </time>
+           </div>
+           <div class="blogs">
+               <a href="https://takano-juku.com/all/%e7%ac%ac3%e5%9b%9e%e3%83%99%e3%83%8d%e3%83%83%e3%82%bb%e3%83%bb%e9%a7%bf%e5%8f%b0%e3%83%9e%e3%83%bc%e3%82%af/">
+               <img src="https://takano-juku.com/wp-content/uploads/2019/11/img_0400.jpg">
+               </a>
+               <h1>第4回学習の診断結果　宇多津中学/坂出東部中学</h1>
+               <time><!--timrタグ、PCが日時と認識できるようにするため-->
+                 <p>2019-11-18</p>
+               </time>
+           </div>
+           <div class="blogs">
+               <a href="https://takano-juku.com/all/%e7%ac%ac4%e5%9b%9e%e5%ad%a6%e7%bf%92%e3%81%ae%e8%a8%ba%e6%96%ad%e7%b5%90%e6%9e%9c%e3%80%80%e5%ae%87%e5%a4%9a%e6%b4%a5%e4%b8%ad%e5%ad%a6/">
+               <img src="https://takano-juku.com/wp-content/uploads/2019/11/img_0369.jpg">
+               </a>
+               <h1>世界はひとつ。高野塾TV</h1>
+               <time><!--timrタグ、PCが日時と認識できるようにするため-->
+                 <p>2019-11-16</p>
+               </time>
+           </div>
+        </div>
+       <div class="blog-btn">
+         <div class="btn-box3">
+             <a href="#" class="btn4">ブログを見る</a>
+         </div>
+       </div>
+     </div>
+    </section>
+    <footer class="sp-no">
+      <div class="navi-box">
+        <div class="navi-box1">
+          <ul class="navi1">
+            <li><a href="#">高野塾とは</a></li>
+            <li><a href="#">塾長メッセージ</a></li>
+            <li><a href="#">合格実績</a></li>
+            <li><a href="#">コース・料金</a></li>
+            <li><a href="#">入塾の流れ</a></li>
+          </ul>
+        </div>
+        <div class="navi-box2">
+          <ul class="navi1">
+            <li><a href="#">TAKANO JUKU TV</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">よくある質問</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </div>
+        <div class="sns">
+          <div class="yt">
+            <a href="#">
+              <img class="icon" src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/youtube.png">
+            </a>
+          </div>
+          <div class="tw">
+              <a href="#">
+                <img class="icon" src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/twitter.png">
+              </a>
+          </div>
+          <div class="inst">
+              <a href="#">
+                <img class="icon" src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/instagram.png">
+              </a>
+          </div>
+          <div class="fb">
+              <a href="#">
+                <img class="icon" src="https://takano-juku.com/wp-content/themes/takanojukutheme/img/facebook.png">
+              </a>
+          </div>
+        </div>
+        <h5>TAKANO JUKU ALL RIGHTS RESERVED.</h5>
+      </div>
+    </footer>
+  </body>
+</html>
